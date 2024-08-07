@@ -11,7 +11,7 @@ public class SpawnedCube : MonoBehaviour
     [SerializeField] private float verticalVelocity = 10;
     [SerializeField] private Vector2 zVelocityRange = new(-1, 1);
 
-    [SerializeField] private int lifetime = 10000;
+    [SerializeField] private int lifetime = 1000;
 
     private Coroutine lifetimeCoroutine;
     private WaitForSeconds lifetimeWait;

@@ -14,7 +14,7 @@ public class CubeSpawner : MonoBehaviour
     public ObjectPool<SpawnedCube> CubePool => cubePool;
 
     private int spawnRate = 16;
-    private int maxSpawns = 10000;
+    private int maxSpawns = 1000;
     [HideInInspector] public int spawnedCubes;
 
     private void Awake()
@@ -83,23 +83,4 @@ public class CubeSpawner : MonoBehaviour
         if (!newSpawnedCube) return;
         newSpawnedCube.Initialized();
     }
-
-
-	//private IEnumerator SpawnCubes()
-    //{
-        //spawnedCubes = 0;
-
-        //while (spawnedCubes < maxSpawns)
-        //{
-		//	int spawnAmount = 10;
-        
-		//	for (int i = 0; i < spawnAmount; i++)
-            //{      
-              //  SpawnedCube cube = Instantiate(cubePrefab, origin);
-                //cube.GetComponent<SpawnedCube>().SetRandomVelocity();
-            //}
-
-			//yield return new WaitForSeconds(spawnRate);
-		//}
-    //}
 }
