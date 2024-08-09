@@ -83,4 +83,10 @@ public class CubeSpawner : MonoBehaviour
         if (!newSpawnedCube) return;
         newSpawnedCube.Initialized();
     }
+
+    private void OnApplicationQuit()
+    {
+        Debug.Log("I was called");
+        cubePool.Clear();
+    }
 }
