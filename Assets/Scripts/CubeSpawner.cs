@@ -14,7 +14,7 @@ public class CubeSpawner : MonoBehaviour
     public ObjectPool<SpawnedCube> CubePool => cubePool;
 
     private int spawnRate = 16;
-    private int maxSpawns = 1000;
+    private int maxSpawns = 10000;
     [HideInInspector] public int spawnedCubes;
 
     private void Awake()
