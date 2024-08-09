@@ -87,6 +87,6 @@ public class CubeSpawner : MonoBehaviour
     private void OnApplicationQuit()
     {
         Debug.Log("I was called");
-        cubePool.Clear();
+        CubePool.Clear();
     }
 }
