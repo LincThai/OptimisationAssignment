@@ -11,7 +11,7 @@ public class SpawnedCube : MonoBehaviour
     [SerializeField] private float verticalVelocity = 10;
     [SerializeField] private Vector2 zVelocityRange = new(-1, 1);
 
-    [SerializeField] private int lifetime = 100;
+    [SerializeField] private int lifetime = 10;
 
     private Coroutine lifetimeCoroutine;
     private WaitForSeconds lifetimeWait;
@@ -19,10 +19,12 @@ public class SpawnedCube : MonoBehaviour
     private void Awake() 
     {
         lifetimeWait = new WaitForSeconds(lifetime);
+        lifetimeCoroutine = StartCoroutine(SetLifetime());
     }
 
     private void OnEnabled()
     {
+        Debug.Log("was enabled");
         lifetimeCoroutine = StartCoroutine(SetLifetime());
     }
 
@@ -37,7 +39,10 @@ public class SpawnedCube : MonoBehaviour
         yield return lifetimeWait;
 
         if (gameObject != null && gameObject.activeSelf)
+        {
+            Debug.Log("release cube");
             CubeSpawner.Instance.CubePool.Release(this);
+        }
     }
 
     public void Initialized()

@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 5896717250205359885, guid: a95bf145d5649c44d872db0034c142a6, type: 3}
-  origin: {fileID: 0}
+  origin: {fileID: 132160562}
   spawnedCubes: 0
 --- !u!4 &31587516
 Transform:

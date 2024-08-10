@@ -52,7 +52,7 @@ MonoBehaviour:
   xVelocityRange: {x: -1, y: 1}
   verticalVelocity: 10
   zVelocityRange: {x: -1, y: 1}
-  lifetime: 10000
+  lifetime: 10
 --- !u!33 &207389229973661193
 MeshFilter:
   m_ObjectHideFlags: 0
