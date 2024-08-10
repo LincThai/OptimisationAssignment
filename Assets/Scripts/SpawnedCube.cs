@@ -24,7 +24,6 @@ public class SpawnedCube : MonoBehaviour
 
     private void OnEnabled()
     {
-        Debug.Log("was enabled");
         lifetimeCoroutine = StartCoroutine(SetLifetime());
     }
 
@@ -32,6 +31,7 @@ public class SpawnedCube : MonoBehaviour
     {
         if (lifetimeCoroutine != null)
             StopCoroutine(lifetimeCoroutine);
+            Destroy(gameObject);
     }
 
     private IEnumerator SetLifetime()
@@ -39,10 +39,7 @@ public class SpawnedCube : MonoBehaviour
         yield return lifetimeWait;
 
         if (gameObject != null && gameObject.activeSelf)
-        {
-            Debug.Log("release cube");
             CubeSpawner.Instance.CubePool.Release(this);
-        }
     }
 
     public void Initialized()
