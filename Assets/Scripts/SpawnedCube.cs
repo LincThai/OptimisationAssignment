@@ -31,7 +31,6 @@ public class SpawnedCube : MonoBehaviour
     {
         if (lifetimeCoroutine != null)
             StopCoroutine(lifetimeCoroutine);
-            Destroy(gameObject);
     }
 
     private IEnumerator SetLifetime()
